@@ -12,7 +12,7 @@ function reveal() {
         reveals[i].classList.add("active");
         if(elementClassList.contains("with-count"))
         {
-           
+            $(".heart").addClass("is-active");
             counter.style.setProperty("--num", 100000);
 
         }
@@ -33,6 +33,8 @@ function reveal() {
   //let's do one where it checks all the ones where it's active'
   //active1 original tweet
   //move to the side
+
+
   
   window.addEventListener("scroll", reveal);
 
