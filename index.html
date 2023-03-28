@@ -1,6 +1,7 @@
 
 <head>
-<script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="script.js"></script>
 <link rel="stylesheet" href="main.css">
 <link href="https://fonts.googleapis.com/css?family=Asap" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
@@ -8,6 +9,13 @@
 <body>
 <section>
     <h1>Visualizing Virality &#8595;</h1>
+    <div class="ripple-background">
+        <div class="circle xxlarge shade1"></div>
+        <div class="circle xlarge shade2"></div>
+        <div class="circle large shade3"></div>
+        <div class="circle mediun shade4"></div>
+        <div class="circle small shade5"></div>
+      </div>
   </section>
   <section>
     <div class="container reveal">
@@ -267,11 +275,23 @@
   <section>
     <div class="container reveal">
         <h1 class="reveal"> We defined a "viral" tweet as a tweet that had at least 5x the engagement of the author's average tweet." </h1>
-        <br>
+        <br> <br>
         <h1 class="reveal with-count"> From this group of tweets, we selected those with more than <span class="counter"></span> likes to explore. </h1>
- 
+        <div class="stage">
+            <div class="heart reveal"></div>
+        </div>
      </div>
  
     
   </section>
+  <section class="white">
+  <img class="twit-log reveal" src="https://cdn.freebiesupply.com/logos/large/2x/twitter-logo-png-transparent.png">
+  <div>
+  <h1 class="reveal blue"> Out of the <span id="item"><span id="highlight">23 billion tweets</span></span>  in January 2023, </h1>
+  <br>
+  <h1 class="reveal blue"> only <span class="pink">0.000015%</span> fit this definition. </h1>
+</div>
+
+
+</section>
 </body>
