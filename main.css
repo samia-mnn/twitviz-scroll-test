@@ -118,7 +118,7 @@ section .text-container .text-box h3{
   position: relative;
   transform: translateX(-200px);
   opacity: 1;
-  transition: 2s all ease;
+  transition: 4s all ease;
   border-width: 0;
 }
 
