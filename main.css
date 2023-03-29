@@ -15,6 +15,19 @@ body{
   background-color: #1DA1F2;
 
 }
+
+button {
+  background-color:#508fb9;
+  padding: 2%;
+  border-width: 0;
+  text-align: right;
+}
+
+button:hover {
+  background-color:#346383;
+  padding: 2%;
+  border-width: 0;
+}
 section{
   min-height: 100vh;
   display: flex;
@@ -83,13 +96,10 @@ section .text-container .text-box h3{
   transition: 1s all ease;
 }
 
-.reveal.tweet-feed
-{
-    text-align:left;
-}
 
 .reveal.tweet-feed
 {
+    text-align:left;
     position: relative;
     transform: translateX(1400px);
     opacity: 0;
@@ -103,6 +113,70 @@ section .text-container .text-box h3{
 
 }
 
+.reveal.before-bar-graph
+{
+  position: relative;
+  transform: translateX(-200px);
+  opacity: 1;
+  transition: 2s all ease;
+  border-width: 0;
+}
+
+.reveal.before-bar-graph.active.top
+{
+  transform: translateY(0);
+  transform: translateX(0);
+  background: #508fb9;
+  stroke-width: 0;
+  border-width: 0;
+  color: #508fb9;
+  margin-top: 0;
+  margin-bottom: 0;
+  border-radius: 0;
+  opacity: 1;
+}
+
+.reveal.before-bar-graph.active.mid-top
+{
+  transform: translateY(0);
+  transform: translateX(0);
+  background: #2b5672;
+  stroke-width: 0;
+  border-width: 0;
+  color: #2b5672;
+  margin-top: 0;
+  margin-bottom: 0;
+  border-radius: 0;
+  opacity: 1;
+}
+
+.reveal.before-bar-graph.active.mid-bot
+{
+  transform: translateY(0);
+  transform: translateX(0);
+  background: #1c3e54;
+  stroke-width: 0;
+  border-width: 0;
+  color: #1c3e54;
+  margin-top: 0;
+  margin-bottom: 0;
+  border-radius: 0;
+  opacity: 1;
+}
+
+.reveal.before-bar-graph.active.bot
+{
+  transform: translateY(0);
+  transform: translateX(0);
+  background: #0b2232;
+  stroke-width: 0;
+  border-width: 0;
+  color: #0b2232;
+  margin-top: 0;
+  margin-bottom: 0;
+  border-radius: 0;
+  opacity: 1;
+}
 
 
 .reveal.tweet-feed.active{
@@ -166,7 +240,6 @@ img {
     font-weight:bold;
   }
   .tweet-header-info span {
-    color:#657786;
     font-weight:normal;
     margin-left: 5px;
   }
@@ -189,7 +262,6 @@ img {
     margin-right: 20px;
   }
   .tweet-info-counts div svg {
-    color:#657786;
     margin-right: 10px;
   }
  
@@ -313,5 +385,68 @@ img {
     
     100%{
       transform: scale(0.8);
+    }
+  }
+
+  .floating-button {
+   
+    animation: float 5s infinite;
+  }
+  
+  .floating-button a {
+    display: block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    text-align: center;
+    border-radius: 50px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+
+  .hearts-container {
+    
+    width: 500px;
+    height: 500px;
+    z-index: 99999;
+    pointer-events: none;
+  }
+  
+  .heart2 {
+    width: 10%;
+    height: 10%;
+    position: absolute;
+    background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/3/32/WikiFont_uniE033_-_heart_-_red.svg/1200px-WikiFont_uniE033_-_heart_-_red.svg.png) no-repeat;
+    background-size: contain;
+    animation: fill-hearts 4s ease-in-out infinite;
+  }
+
+  .relative {
+    position: relative;
+  }
+  
+  @keyframes fill-hearts {
+    0% {
+      transform: scale(1) translate(0%, 50%);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(1.2) translate(10%, 25%);
+      opacity: 0.8;
+    }
+    100% {
+      transform: scale(1) translate(0%, 0%);
+      opacity: 0;
     }
   }

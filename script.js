@@ -16,6 +16,11 @@ function reveal() {
             counter.style.setProperty("--num", 100000);
 
         }
+        if(elementClassList.contains("before-bar-graph"))
+        {
+          $(".pre-bar").remove();
+
+        }
       } else {
         reveals[i].classList.remove("active");
       }
@@ -33,8 +38,22 @@ function reveal() {
   //let's do one where it checks all the ones where it's active'
   //active1 original tweet
   //move to the side
+  function randomPosition() {
+    console.log("hi");
+    const hearts = document.querySelectorAll(".heart2");
+    console.log(hearts);
+    for (var i = 0; i < hearts.length; i++) {
+    const randomX = Math.floor(Math.random() * window.innerWidth/3);
+    const randomY = Math.floor(Math.random() * window.innerHeight/2);
+    hearts[i].style.left = randomX + "px";
+    hearts[i].style.top = randomY + "px";
+    console.log(hearts[i]);
+    }
+  };
 
-
+ $( document ).ready(function() {
+  randomPosition();
+});
   
   window.addEventListener("scroll", reveal);
 
