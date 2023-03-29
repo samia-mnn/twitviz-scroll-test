@@ -127,8 +127,6 @@ section .text-container .text-box h3{
   transform: translateY(0);
   transform: translateX(0);
   background: #508fb9;
-  stroke-width: 0;
-  border-width: 0;
   color: #508fb9;
   margin-top: 0;
   margin-bottom: 0;
@@ -214,12 +212,11 @@ img {
   .tweet-wrap {
     max-width:400px;
     background: #fff;
-    margin: 20px;
-    margin-top: 10px;
+    margin: 2%;
+    margin-top: 2%;
     border-radius:20px;
-    padding: 30px;
-    border-bottom: 1px solid #e6ecf0;
-    border-top: 1px solid #e6ecf0;
+    padding: 2%;
+
     transform: translateY(0);
     display: inline-block;
   }

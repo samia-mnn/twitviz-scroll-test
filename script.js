@@ -51,10 +51,29 @@ function reveal() {
     }
   };
 
+ 
+
  $( document ).ready(function() {
   randomPosition();
+  $(".lets-go").click(function() {
+    expandToAccountSize();
+  });
+ 
 });
   
+function expandToAccountSize() {
+  $(".top").css({'padding-bottom':'10%'});
+  $(".mid-top").css({'padding-bottom':'20%'});
+  $(".mid-bot").css({'padding-bottom':'0'});
+  $(".bot").css({'padding-bottom':'0'});
+  $(".bot").css({'padding-top':'0'});
+
+  $("#top-info").text("78% of viral tweets were from accounts with more than 50,000 followers.")
+  $("#bot-info").empty();
+  $(".lets-go").html("<h1>Next</h1>");
+
+  console.log("run");
+}
   window.addEventListener("scroll", reveal);
 
   
